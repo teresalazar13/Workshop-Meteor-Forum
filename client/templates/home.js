@@ -9,6 +9,10 @@ Template.home.helpers({
     return list;
   },
 
+  collectionOfQuestions: function() {
+    return Questions.find({});
+  }
+
 });
 
 Template.home.events({
