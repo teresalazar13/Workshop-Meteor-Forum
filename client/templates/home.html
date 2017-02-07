@@ -5,7 +5,13 @@
 
 <template name="home">
   <h3>List of questions</h3>
+  <!--
   {{#each listOfQuestions}}
     {{> question}}
   {{/each}}
+  -->
+  {{#each collectionOfQuestions}}
+    {{> question}}
+  {{/each}}
+
 </template>
