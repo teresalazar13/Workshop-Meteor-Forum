@@ -35,4 +35,8 @@ Template.home.events({
     target.text.value = '';
   },
 
+  'click .delete': function(error) {
+    Questions.remove(this._id);
+  }
+
 });
