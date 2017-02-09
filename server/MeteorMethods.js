@@ -9,7 +9,8 @@ Meteor.methods({
       text: text,
       createdAt: new Date(), // current time
       owner: Meteor.userId(),
-      privateState: false
+      privateState: false,
+      comments: []
     });
   },
 
@@ -21,6 +22,11 @@ Meteor.methods({
   'questions.setPrivate': function(questionId, booleanState) {
     check(questionId, String);
     Questions.update(questionId, { $set: { privateState: booleanState } });
+  },
+
+  'comments.insert': function(questionId, text) {
+    check(text, String);
+    Questions.update(questionId, {$push: {comments: text}});
   }
 
 });

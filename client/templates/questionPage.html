@@ -1,5 +1,9 @@
 <template name="questionPage">
   <p>{{text}} by {{username}}</p>
+  <p>Comments</p>
+  {{#each comments}}
+    <p>{{this}}</p>
+  {{/each}}
   <form class="new-comment">
     <input type="text" name="text" placeholder="Add a comment" />
   </form>
