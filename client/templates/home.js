@@ -25,12 +25,8 @@ Template.home.events({
     var target = event.target;
     var text = target.text.value;
 
-    // Insert a question into the collection
-    Questions.insert({
-      text: text,
-      createdAt: new Date(), // current time
-      owner: Meteor.userId()
-    });
+    // Call method to insert question
+    Meteor.call('questions.insert', text);
 
     // Clear form
     target.text.value = '';
