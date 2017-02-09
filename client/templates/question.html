@@ -1,10 +1,10 @@
 <template name="question">
   <div class="container-fluid">
     <div class="form-group">
-      <li>{{text}}</li>
+      <a href="/questionPage/{{id}}"><li>{{text}}</li></a>
       <li class="owner">by {{ownerUsername}}</li>
       {{#if isOwner}}
-        <button class="toggle-private">
+        <button class="btn btn-default toggle-private">
           {{#if privateState}}
             Private
           {{else}}

@@ -33,8 +33,3 @@ Template.home.events({
   },
 
 });
-
-Template.home.onCreated(function bodyOnCreated() {
-  Meteor.subscribe('questions');
-  Meteor.subscribe('usersData');
-});
