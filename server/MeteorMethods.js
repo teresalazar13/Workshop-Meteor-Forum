@@ -8,13 +8,19 @@ Meteor.methods({
     Questions.insert({
       text: text,
       createdAt: new Date(), // current time
-      owner: Meteor.userId()
+      owner: Meteor.userId(),
+      privateState: false
     });
   },
 
   'questions.remove': function(questionId) {
     check(questionId, String);
     Questions.remove(questionId);
+  },
+
+  'questions.setPrivate': function(questionId, booleanState) {
+    check(questionId, String);
+    Questions.update(questionId, { $set: { privateState: booleanState } });
   }
 
 });
