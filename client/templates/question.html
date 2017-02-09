@@ -1,8 +1,11 @@
 <template name="question">
+
   <div class="container-fluid">
+
     <div class="form-group">
-      <a href="/questionPage/{{id}}"><li>{{text}}</li></a>
-      <li class="owner">by {{ownerUsername}}</li>
+
+      <a href="/questionPage/{{id}}" class="question-text"><p>{{text}}</p></a>
+      <p class="owner">by {{ownerUsername}}</p>
       {{#if isOwner}}
         <button class="btn btn-default toggle-private">
           {{#if privateState}}
@@ -13,6 +16,9 @@
         </button>
         <button class="btn btn-default delete">&times;</button>
       {{/if}}
+
     </div>
+
   </div>
+
 </template>

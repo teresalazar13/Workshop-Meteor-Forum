@@ -21,4 +21,8 @@ Template.questionPage.events({
     target.text.value = '';
   },
 
+  'click #back': function() {
+    Router.go('/');
+  }
+
 });

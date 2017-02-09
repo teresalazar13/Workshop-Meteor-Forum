@@ -1,24 +1,26 @@
 <template name="home">
 
-  <h1>Welcome</h1>
+  <h1 class="home-title">Welcome to The Forum</h1>
 
-  {{> loginButtons}}
+  <div class="container-fluid" id="login-buttons">
+    {{> loginButtons}}
+  </div>
 
   {{#if currentUser}}
+    <h2 class="home-subtitle">List of questions</h2>
 
-    <h3>List of questions</h3>
-    <!--
-    {{#each listOfQuestions}}
-      {{> question}}
-    {{/each}}
-    -->
-    {{#each collectionOfQuestions}}
-      {{> question}}
-    {{/each}}
+    <div class="container-fluid" id="list-of-questions">
 
-    <form class="new-question">
-      <input type="text" name="text" placeholder="Add a new question" />
-    </form>
+      <h3 style="font-family: Helvetica;">Add a new question</h3>
+      <form class="new-question">
+        <input type="text" name="text" placeholder="Add a new question" class="form-control" id="new-question-input" />
+      </form>
+
+      {{#each collectionOfQuestions}}
+        {{> question}}
+      {{/each}}
+
+    </div>
 
   {{/if}}
 
