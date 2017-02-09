@@ -9,7 +9,12 @@ Template.question.helpers({
 
   privateState: function() {
     return this.privateState;
-  }
+  },
+
+  id: function() {
+    return this._id;
+  },
+
 });
 
 Template.question.events({
