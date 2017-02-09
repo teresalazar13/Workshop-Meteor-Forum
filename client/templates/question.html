@@ -1,4 +1,9 @@
 <template name="question">
-  <li>{{text}}</li>
-  <button class="delete">&times;</button>
+  <div class="container-fluid">
+    <div class="form-group">
+      <li>{{text}}</li>
+      <li class="owner">by {{ownerUsername}}</li>
+      <button class="btn btn-default delete">&times;</button>
+    </div>
+  </div>
 </template>

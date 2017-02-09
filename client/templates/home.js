@@ -29,6 +29,7 @@ Template.home.events({
     Questions.insert({
       text: text,
       createdAt: new Date(), // current time
+      owner: Meteor.userId()
     });
 
     // Clear form
