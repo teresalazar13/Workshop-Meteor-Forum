@@ -32,8 +32,9 @@ Template.home.events({
     target.text.value = '';
   },
 
-  'click .delete': function(error) {
-    Meteor.call('questions.remove', this._id);
-  }
+});
 
+Template.home.onCreated(function bodyOnCreated() {
+  Meteor.subscribe('questions');
+  Meteor.subscribe('usersData');
 });

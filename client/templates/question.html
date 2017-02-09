@@ -3,7 +3,16 @@
     <div class="form-group">
       <li>{{text}}</li>
       <li class="owner">by {{ownerUsername}}</li>
-      <button class="btn btn-default delete">&times;</button>
+      {{#if isOwner}}
+        <button class="toggle-private">
+          {{#if privateState}}
+            Private
+          {{else}}
+            Public
+          {{/if}}
+        </button>
+        <button class="btn btn-default delete">&times;</button>
+      {{/if}}
     </div>
   </div>
 </template>
