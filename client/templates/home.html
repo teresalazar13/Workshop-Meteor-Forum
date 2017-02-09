@@ -4,18 +4,25 @@
 </body>
 
 <template name="home">
-  <h3>List of questions</h3>
-  <!--
-  {{#each listOfQuestions}}
-    {{> question}}
-  {{/each}}
-  -->
-  {{#each collectionOfQuestions}}
-    {{> question}}
-  {{/each}}
 
-  <form class="new-question">
-    <input type="text" name="text" placeholder="Add a new question" />
-  </form>
+  {{> loginButtons}}
+
+  {{#if currentUser}}
+
+    <h3>List of questions</h3>
+    <!--
+    {{#each listOfQuestions}}
+      {{> question}}
+    {{/each}}
+    -->
+    {{#each collectionOfQuestions}}
+      {{> question}}
+    {{/each}}
+
+    <form class="new-question">
+      <input type="text" name="text" placeholder="Add a new question" />
+    </form>
+
+  {{/if}}
 
 </template>
