@@ -12,4 +12,9 @@ Meteor.methods({
     });
   },
 
+  'questions.remove': function(questionId) {
+    check(questionId, String);
+    Questions.remove(questionId);
+  }
+
 });

@@ -33,7 +33,7 @@ Template.home.events({
   },
 
   'click .delete': function(error) {
-    Questions.remove(this._id);
+    Meteor.call('questions.remove', this._id);
   }
 
 });
