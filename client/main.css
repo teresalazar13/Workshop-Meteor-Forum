@@ -1,1 +1,44 @@
-/* CSS declarations go here */
+#login-buttons {
+  float: bottom;
+  margin-left: 2%;
+}
+
+.home-title {
+  font-family: Helvetica;
+  text-align: center;
+  margin-top: 3%;
+}
+
+.home-subtitle {
+  font-family: Helvetica;
+  text-align: center;
+  margin-top: 1%;
+}
+
+#list-of-questions {
+  margin-left: 20%;
+  margin-top: 3%;
+}
+
+#new-question-input {
+  width: 70%;
+  margin-bottom: 2%;
+}
+
+.question-text {
+  font-family: Helvetica;
+  font-size: 2em;
+  color: black;
+}
+
+.question-text:hover {
+  color: red;
+  text-shadow: 100px;
+  text-decoration: none;
+}
+
+.owner {
+  font-family: Helvetica;
+  font-size: 1.5em;
+  color: grey;
+}

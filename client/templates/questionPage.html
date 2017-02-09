@@ -1,10 +1,15 @@
 <template name="questionPage">
-  <p>{{text}} by {{username}}</p>
-  <p>Comments</p>
-  {{#each comments}}
-    <p>{{this}}</p>
-  {{/each}}
-  <form class="new-comment">
-    <input type="text" name="text" placeholder="Add a comment" />
-  </form>
+  <div class="container-fluid">
+    <h1>{{text}} by {{username}}</h1>
+    <h3>Comments</h3>
+    {{#each comments}}
+      <p>{{this}}</p>
+    {{/each}}
+    <form class="new-comment">
+      <input type="text" name="text" placeholder="Add a comment" class="form-control" id="new-question-input"  />
+    </form>
+    <button type="button" class="btn btn-default btn-lg" id="back">
+      <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Back
+    </button>
+  </div>
 </template>
